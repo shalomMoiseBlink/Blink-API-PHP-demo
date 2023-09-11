@@ -8,19 +8,22 @@
 <body>
     <form action="./create-intent.php" method="post">
         <label for="amount">Amount:</label>
-        <input type="text" name="amount" value="1.01"> <br>
+        <input type="text" id="amount" name="amount" value="1.01"> <br>
         <label for="transaction_type">Transaction Type:</label>
-        <input type="text" name="transaction_type" value="SALE"> <br>
+        <input type="text" name="transaction_type" id="transaction_type" value="SALE"> <br>
         <label for="payment_type">Payment Type:</label>
-        <input type="text" name="payment_type" value="credit-card" readonly> <br>
+        <input type="text" name="payment_type" value="credit-card" id="credit-card" readonly> <br>
         <label for="payment_type">Currency:</label>
-        <input type="text" name="currency" value="GBP" readonly> <br>
+        <input type="text" name="currency" value="GBP" id="GBP" readonly> <br>
         <label for="return_url">Redirect URL:</label>
-        <input type="text" name="return_url" value="http://127.0.0.1/sites/blinkapi-php/redirect/"> <br>
+        <input type="text" name="return_url" id="return_url"> <br>
         <label for="notification_url">Notification URL:</label>
-        <input type="text" name="notification_url" value="https://test.com/notification">
+        <input type="text" name="notification_url" id="notification_url" value="https://blinktest.com/notification">
         <br>
         <input type="submit" value="Create Intent">
     </form>
 </body>
+<script>
+    document.getElementById("return_url").value= `${document.URL.split("Intent")[0]}redirect/`;
+</script>
 </html>
