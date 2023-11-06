@@ -15,6 +15,7 @@
   <h2>Google Pay</h2>
   <form id="googleForm" action="googleReq.php" method="POST">
 
+
   </form>
   <div id="response""></div>
 

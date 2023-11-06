@@ -4,7 +4,6 @@ fetch("../Intent/intent.json").then((res) => {
   })
     .then((body) => {
     
-      //  intent = {...body}
       const { amount, currency } = body;
 
       const obj = { amount, currency };

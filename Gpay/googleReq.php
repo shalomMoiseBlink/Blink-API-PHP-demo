@@ -36,8 +36,7 @@ echo "Error: " . $error['message'];
 
 
 } else {
-
-echo "<p>Payment was completed go <a href='". $obj["url"] ."'>here to see the results </a></p>";
+echo "<p>Payment was completed go <a href='". json_decode($result) ->url ."'>here to see the results </a></p>";
 }
 
 ?> 
