@@ -18,8 +18,40 @@
 
   </form>
   <div id="response""></div>
+  <div id="environmentTest">
 
-  <script src="./blinkgooglepay.js?intentId=<?php echo $_GET["intentId"];?>"></script>
+  <?php 
+$env = $_GET["googleEnv"];
+if($env ==="TEST") {
+  $otherEnv = "PRODUCTION";  
+} else {
+  $otherEnv = "TEST";  
+}
+
+$inputUrl = $_SERVER["SERVER_NAME"].  $_SERVER["REQUEST_URI"];
+
+// Parse the URL to get the query string
+$queryString = parse_url($inputUrl, PHP_URL_QUERY);
+
+// Parse the query string into an associative array
+parse_str($queryString, $queryParams);
+
+// Check if the "googleEnv" parameter exists and change its value
+if (isset($queryParams['googleEnv']) && $queryParams['googleEnv'] === $env) {
+    $queryParams['googleEnv'] = $otherEnv;
+}
+
+// Reconstruct the modified query string
+$modifiedQueryString = http_build_query($queryParams);
+
+// Rebuild the URL with the modified query string
+$modifiedUrl = str_replace($queryString, $modifiedQueryString, $inputUrl);
+
+?>
+    <p>The Google Environment is now <?php echo $env;?>.</p>
+    <p>Change it to <a href="http://<?php echo $modifiedUrl;?>"><?php echo $otherEnv;?></a></p>
+  </div>
+  <script src="./blinkgooglepay.js?intentId=<?php echo $_GET["intentId"];?>&googleEnv=<?php echo $env;?>"></script>
 </body>
 
 </html>

@@ -33,6 +33,6 @@ $id = $obj->id;
 file_put_contents("./intent.json", json_encode($obj));
 echo "<p> Intent has been made. It has beens saved on the server for <a href='./intent.json'> demo purposes</a>. <br>
 Go to <a href='../Payment/create-payment.html'>here to load payment sheet and pay</a>
-Or Try <a href='../Gpay/?intentId=". $id ."'>Google Pay</a>
+Or Try <a href='../Gpay/?intentId=". $id ."&googleEnv=TEST'>Google Pay</a>
 </p>";
 ?>

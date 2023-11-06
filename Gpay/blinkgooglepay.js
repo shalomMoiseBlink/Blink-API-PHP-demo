@@ -1,4 +1,12 @@
 
+  const currentUrl = window.location.href;
+
+// Create a URLSearchParams object from the query string
+const searchParams = new URLSearchParams(window.location.search);
+
+// Get the value of a specific query parameter
+const googleEnv = searchParams.get('googleEnv');
+
 fetch("../Intent/intent.json").then((res) => {
     return res.json()
   })
@@ -155,7 +163,7 @@ emailRequired: true
   */
   function getGooglePaymentsClient() {
     if (paymentsClient === null) {
-      paymentsClient = new google.payments.api.PaymentsClient({ environment: 'TEST' }); // 'TEST' PRODUCTION , when in TEST, the jwt auth will not be checked.
+      paymentsClient = new google.payments.api.PaymentsClient({ environment: googleEnv }); // 'TEST' PRODUCTION , when in TEST, the jwt auth will not be checked.
     }
     return paymentsClient;
   }
