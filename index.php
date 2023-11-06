@@ -17,6 +17,8 @@
         <label for="ENV">Choose an Environment:</label>
         <select id="ENV" name="ENV">
             <option value="DEV">DEV</option>
+            <option value="TST">TST</option>
+            <option value="PPD">PPD</option>
             <option value="SECURE">SECURE</option>
         </select>
 
