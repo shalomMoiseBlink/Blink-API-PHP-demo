@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Sheet</title>
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://secure.blinkpayment.co.uk/assets/css/api.css"> -->
+
 </head>
 <style>
     .modal {
@@ -39,7 +38,7 @@
 <h1>Payment Sheet</h1>
 
 
-
+<!-- <form id="paymentForm" action="./process-card-hillier.php" method="post"> -->
     <form id="paymentForm" action="./process-card.php" method="post">
       
         <input type="submit" value="Pay">
@@ -55,56 +54,37 @@
     
 </body>
 <script>
-const blinkCardGateway = document.createElement("script");
-                blinkCardGateway.src = "https://gateway2.blinkpayment.co.uk/sdk/web/v1/js/hostedfields.min.js";
-                document.head.appendChild(blinkCardGateway);
-    fetch("../Intent/intent.json")
-    .then((res)=>{
-        
 
-                const customJquery = document.createElement("script");
-                customJquery.src = "https://secure.blinkpayment.co.uk/assets/js/api/custom.js";
-                document.head.appendChild(customJquery);
-        return res.json()
+    fetch("../Intent/intent.json")
+    .then((res)=>{    
+          return res.json()
         })
     .then((body)=>{
         const {amount, currency} = body;
         const obj = {amount, currency};
         let extraHtml = '';
         for (item in obj){
-        extraHtml += `  <label for="${item}">${item}</label> <input type="text" name="${item}" id="${item}" value="${obj[item]}"> <br>`;
+        extraHtml += `<label for="${item}">${item}</label> <input type="text" name="${item}" id="${item}" value="${obj[item]}"> <br>`;
         };
         document.getElementById("paymentForm").innerHTML = extraHtml + body.element.ccElement + `<input type='submit' value='submit'/>`
-        document.addEventListener("DOMContentLoaded", function() {
-    const myForm = document.getElementById("paymentForm");
-
-    if (myForm) {
-        myForm.addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            // Open your modal or iframe
-            // For a modal example:
-            const modal = document.createElement("div");
-            modal.classList.add("modal");
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <!-- Your content here -->
-                    <p>Thank you for submitting the form!</p>
-                    <button id="closeModal">Close</button>
-                </div>
-            `;
-            
-            document.body.appendChild(modal);
-
-            // Close modal when close button is clicked
-            const closeModalButton = document.getElementById("closeModal");
-            closeModalButton.addEventListener("click", function() {
-                document.body.removeChild(modal);
-            });
-        });
-    }
-});
-    })
+    
+    
+}).then(()=>{
+    const standardJQuery = document.createElement("script");
+                standardJQuery.src = "https://code.jquery.com/jquery-3.6.3.min.js";
+                document.body.appendChild(standardJQuery);
+                return;
+}).then(()=>{
+    const blinkCardGateway = document.createElement("script");
+                blinkCardGateway.src = "https://gateway2.blinkpayment.co.uk/sdk/web/v1/js/hostedfields.min.js";
+                document.body.appendChild(blinkCardGateway);
+                return;
+}).then(()=>{
+    const customJquery = document.createElement("script");
+                customJquery.src = "https://dev.blinkpayment.co.uk/assets/js/api/custom.js";
+                document.body.appendChild(customJquery);
+})
+  
 
 
         const addCSS = (id) =>{
@@ -112,7 +92,7 @@ const blinkCardGateway = document.createElement("script");
             document.getElementById(id).value = "on";
             const stylesheet = document.createElement("link");
             stylesheet.rel = "stylesheet";
-            stylesheet.href = "https://secure.blinkpayment.co.uk/assets/css/api.css";
+            stylesheet.href = "https://dev.blinkpayment.co.uk/assets/css/api.css";
             stylesheet.id = "blinkStyleSheet";
             document.head.appendChild(stylesheet);
             document.getElementById(id).innerHTML = "Remove CSS";

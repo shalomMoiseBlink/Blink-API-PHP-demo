@@ -16,7 +16,7 @@ $headers = array(
      "accept-charset: "
 );
 
-$url = "https://secure.blinkpayment.co.uk/api/pay/v1/creditcards ";
+$url = "https://". $data -> blink_env.".blinkpayment.co.uk/api/pay/v1/creditcards ";
 
 $options = array(
     'http' => array(
@@ -27,7 +27,7 @@ $options = array(
 );
 
 $context  = stream_context_create($options);
-echo "<br>";
+// echo $url . "<br>" . $context;
 $result = file_get_contents($url, false, $context);
 if ($result === FALSE) { /* Handle error */ 
 echo "Error in creating payment";
@@ -58,7 +58,6 @@ while($i < count($queries)){
   $i++;
 }
 
-file_put_contents("./paymentResult.json", json_encode($results));
 echo "<p>Payment was completed go <a href='". $obj -> url ."'>here to see the results </a></p>";
 }
 }

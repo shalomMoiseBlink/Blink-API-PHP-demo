@@ -28,7 +28,7 @@
         
     
     
-    $url = "https://secure.blinkpayment.co.uk/api/pay/v1/transactions/" .   $transactionId;
+    $url = "https://". $tokens -> blink_env.".blinkpayment.co.uk/api/pay/v1/transactions/" .   $transactionId;
     $options = array(
         'http' => array(
             'header'  => implode("\r\n", $headers) . "\r\n",
