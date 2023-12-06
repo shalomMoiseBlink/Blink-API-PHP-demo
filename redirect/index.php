@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
         <title>Payment Results</title>
     </head>
     <body>
@@ -63,6 +64,8 @@ const restart = ()=>{
 }
     
 </script>
+<script src="../footer.js"></script>
+
     </body>
     </html>
     

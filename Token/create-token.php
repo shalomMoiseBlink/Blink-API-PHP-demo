@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Token Success</title>
 </head>
 <body>
@@ -51,13 +52,17 @@ $obj = json_decode($result);
 // $token = $obj->{"access_token"};
 $obj->blink_env = $blinkEnvLowerCase;
 file_put_contents("./token.json", json_encode($obj));
-echo "<p> Token has been made. It is saved on the server for<a href='./token.json'> demo purposes <a> 
-<br> go to  <a href='../Intent/create-intent.html'>here to create intent</a>.</p>";
+// echo "<p> Token has been made. It is saved on the server for<a href='./token.json'> demo purposes <a> 
+// <br> go to  <a href='../Intent/create-intent.html'>here to create intent</a>.</p>";
 }
 
 
 
 ?>
+
+<p> Token has been made. It is saved on the server for<a class="button" href='./token.json'> demo purposes <a> 
+<br> go to  <a class="button" href='../Intent/create-intent.html'>here to create intent</a>.</p>
+<script src="../footer.js"></script>
 
 </body>
 </html>

@@ -23,16 +23,17 @@ $context  = stream_context_create($options);
 $result = file_get_contents($url, false, $context);
 if ($result === FALSE) { /* Handle error */ 
 echo "Error in token";
-
+var_dump($result);
 } else {
 
 
 $obj = json_decode($result);
 $id = $obj->id;
-}
 file_put_contents("./intent.json", json_encode($obj));
 echo "<p> Intent has been made. It has beens saved on the server for <a href='./intent.json'> demo purposes</a>. <br>
-Go to <a href='../Payment/create-payment.html'>here to load payment sheet and pay</a>
-Or Try <a href='../Gpay/?intentId=". $id ."&googleEnv=TEST'>Google Pay</a>
+Go to <a href='../Payment/create-payment.php'  class='button'>here to load payment sheet and pay</a>
+Or Try <a href='../Gpay/?intentId=". $id ."&googleEnv=TEST' class='button' >Google Pay</a>
 </p>";
+}
+echo '<script src="../footer.js"></script>';
 ?>

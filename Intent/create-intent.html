@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
     <title>Create Intent</title>
 </head>
 <body>
@@ -21,10 +22,12 @@
         <label for="notification_url">Notification URL:</label>
         <input type="text" name="notification_url" id="notification_url" value="https://blinktest.com/notification">
         <br>
-        <input type="submit" value="Create Intent">
+        <input type="submit" class="button" value="Create Intent">
     </form>
 </body>
 <script>
     document.getElementById("return_url").value= `${document.URL.split("Intent")[0]}redirect/`;
 </script>
+<script src="../footer.js"></script>
+
 </html>

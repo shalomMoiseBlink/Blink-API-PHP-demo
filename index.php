@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="style.css">
     <title>API Demo</title>
 </head>
 
@@ -29,10 +29,9 @@
             <option value="LIVE">LIVE</option>
         </select>
         <br><br>
-        <input type="submit" value="Create Token">
+        <input type="submit" value="Create Token" class="button">
     </form>
 </body>
 
-<script src="./env.js"></script>
-
+<!-- <script src="./footer.js"></script> -->
 </html>
