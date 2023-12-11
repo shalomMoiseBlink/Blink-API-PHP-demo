@@ -36,28 +36,6 @@ echo $intent['element']['gpElement'];
 <br>
 
 </body>
-<script>
-
-
-$('#cc_customer_name').keyup(function(e) {
-            var txtVal = $(this).val();
-            $('#gp_customer_name').val(txtVal);
-        });
-        $('#cc_customer_email').keyup(function(e) {
-            var txtVal = $(this).val();
-            $('#gp_customer_email').val(txtVal);
-        });
-        $('#cc_customer_address').keyup(function(e) {
-            var txtVal = $(this).val();
-            $('#gp_customer_address').val(txtVal);
-        });
-        $('#cc_customer_postcode').keyup(function(e) {
-            var txtVal = $(this).val();
-            $('#gp_customer_postcode').val(txtVal);
-        });
-
-    
-</script>
 <script src="../footer.js"></script>
 
 

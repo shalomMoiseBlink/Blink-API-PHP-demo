@@ -11,11 +11,7 @@ $headers = array(
      "accept-encoding: gzip, deflate, br", 
      "accept-charset: "
 );
-$resource = "creditcards";
-if(isset($_POST["googlePayToken"])){
-    $resource = "googlepay";
-    $_POST["paymentToken"] =$_POST["googlePayToken"];
-}
+$resource = $_POST["resource"];
 $url = "https://". $data -> blink_env.".blinkpayment.co.uk/api/pay/v1/$resource";
 
 $options = array(
@@ -27,7 +23,7 @@ $options = array(
 );
 
 $context  = stream_context_create($options);
-// echo $url . "<br>" . $context;
+echo $url . "<br>" . $context;
 $result = file_get_contents($url, false, $context);
 if ($result === FALSE) { /* Handle error */ 
 echo "Error in creating payment";
