@@ -5,13 +5,13 @@ var footer = document.createElement("footer");
 var createTokenLink = createLink("../index.php", "Go Create Token");
 var createIntentLink = createLink("../Intent/create-intent.html", "Create Intent");
 var cardPaymentLink = createLink("../Payment/create-payment.php", "Card Payment");
-var googlePayLink = createLink("../Gpay/index.php?googleEnv=TEST", "Google Pay");
+
 
 // Append anchor elements to the footer
 footer.appendChild(createTokenLink);
 footer.appendChild(createIntentLink);
 footer.appendChild(cardPaymentLink);
-footer.appendChild(googlePayLink);
+
 
 // Append the footer to the HTML body
 document.body.appendChild(footer);
