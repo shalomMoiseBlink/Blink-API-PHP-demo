@@ -21,9 +21,14 @@
     $dotenv->load();
     $blink_env = $_POST['ENV'];
     $type = $_POST['type'];
-
+ if($type === "CUSTOM") {
+    $apiKey = $_POST["api_key"];
+    $secretKey = $_POST["secret_key"];
+ }else {
     $apiKey = $_ENV[$blink_env . "_" . $type . "_API_KEY"];
     $secretKey = $_ENV[$blink_env . "_" . $type . "_SECRET_KEY"];
+ }
+   
     $keys = array(
         "api_key" => $apiKey,
         "secret_key" => $secretKey,
@@ -31,11 +36,11 @@
         "address_postcode_required" => true,
         'source_site' => 'http://localhost/sites/blinkapi-php',
         'application_name' => "Shalom's local site",
-        'application_description' => "For testing the API",
+        'application_description' => "For testing the API"
     );
 
     $blinkEnvLowerCase = strtolower($blink_env);
-    // $url = "https://".$_POST["env"] .".blinkpayment.co.uk/api/pay/v1/tokens";
+
     $url = "https://" . $blinkEnvLowerCase . ".blinkpayment.co.uk/api/pay/v1/tokens";
     $options = array(
         'http' => array(

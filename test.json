@@ -1,0 +1,35 @@
+{
+    "merchantID":"140841",
+    "payment_intent":"pi_m6GP4doOg4vJb5NfRB5nrtlZWHMK3GpP0usQE0y9qWBeX6rmjv35Ww2T5udgmQjpQvK5kjtaH6c9FcCKtHorandhCXkMaEOsljWokaOsQf0",
+    "resource":"creditcards",
+    "transaction_unique":"4URus8x8YYMT",
+    "customer_name":"Shalom",
+    "customer_email":"s.moise@blinkpayment.co.uk",
+    "customer_address":"324",
+    "customer_postcode":"324",
+    "device_timezone":"0",
+    "device_capabilities":"javascript",
+    "device_accept_language":"en-GB",
+    "device_screen_resolution":"1920x1080x24",
+    "remote_address":"154.57.250.68",
+    "type":"1",
+    "paymentToken":"eyJwYXltZW50VG9rZW4iOnsibWV0aG9kIjoiY2FyZCIsInJlc291cmNlIjoic3RvcmUiLCJpZCI6MzgzNjQ4MH19"
+ }
+ 
+ {
+    "paymentToken":"{\"signature\":\"MEUCIAasL0RJgLOEcSnsJom88qCkMaBwimU8mOZtY31yC9dQAiEA1joXVEebeyQRdztVQMT8RmBjS2NKmbLeTkAekLvJERA\\u003d\",\"intermediateSigningKey\":{\"signedKey\":\"{\\\"keyValue\\\":\\\"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIHzU8/0DivuPpNDz2nTytGsl/pJ/YD+YkrWGbJrYhMzlRXgTNtLL2p45yi4q1GqwfPJVyth4AopC8uH/1FOw+w\\u003d\\u003d\\\",\\\"keyExpiration\\\":\\\"1706029434711\\\"}\",\"signatures\":[\"MEYCIQDbcrHviAAV7AX8EfyqAQdewupxaRt4vgVPqtRXRCQKDQIhANHQgFUMQ6zWdxpDN9UuEXX2Ak4xjdiB6dW+bZ+Ug6jy\"]},\"protocolVersion\":\"ECv2\",\"signedMessage\":\"{\\\"encryptedMessage\\\":\\\"oKbJ4J7nQWGqhr19OCr89MrklK/0LXa8/oJ9MITjpFvF9dEhxU9knMpRrrtc0gw40j+7rxr8REiduyUtr6L85QIe04ZKga7/1s90gCLtOEfkANSBtcHKtR0f4TBoi488YOlprPRQ4cyirwZvQL3csHaIdeAWnDg6rLBF4Q5bonHd9AIFSC0ohDRhlrKqFPv+hSzdu5JsdO9z/Wq+eFHK2Ft2pOU2PVeJ2QbrW2orMZdUIuKx75KB1lIMVkcb4sbeiDEnnfl0rEHJkTEkRWRcmMxf1wvrv5k/BxVehCRzVsNb1ZUycTZMXRlMp+rcIeQ83S3GuDLsF+w7wR+7B4qhTtpz3/ZbuykdA91+p6E43ArHTVHxSUid794ZGzxHdHpGCx1pc7kAHLMH4rWiBErkz4+ctljn8Hd5JgnSluHDPHywTKt7vx6RrIhK7r0rCWfYeFJZwnMeFEbVZdrJXilOcRGWmn46zZoadg\\u003d\\u003d\\\",\\\"ephemeralPublicKey\\\":\\\"BArL6TBuQXTiqKiyF7D7kiEG+B91KOf2RIw5L/pjyI+dUiQ8/jvOZnk1tfU0wisONZTQwT0HSbI0dL14iZq00rI\\u003d\\\",\\\"tag\\\":\\\"hVfe32mhj6/8oaE2sdqpcGZJRAzl65NuQtSZnDn+NG4\\u003d\\\"}\"}",
+    "resource":"googlepay",
+    "payment_intent":"pi_m6GP4doOg4vJb5NfRB5nrtlZWHMK3GpP0usQE0y9qWBeX6rmjv35Ww2T5udgmQjpQvK5kjtaH6c9FcCKtHorandhCXkMaEOsljWokaOsQf0",
+    "transaction_unique":"4URus8x8YYMT",
+    "customer_name":"",
+    "customer_email":"",
+    "customer_address":"",
+    "customer_postcode":"",
+    "device_timezone":"",
+    "device_capabilities":"",
+    "device_accept_language":"",
+    "device_screen_resolution":"",
+    "remote_address":"",
+    "type":"1"
+ }
+ 

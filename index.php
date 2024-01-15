@@ -24,14 +24,22 @@
 
         <br>
         <label for="type">Live or demo?</label>
-        <select id="type" name="type">
+        <select id="type" name="type" onchange="checkIfCustom()">
             <option value="DEMO">DEMO</option>
             <option value="LIVE">LIVE</option>
+            <option value="CUSTOM">CUSTOM</option>
         </select>
-        <br><br>
-        <input type="submit" value="Create Token" class="button">
+        <br>
+        <div id="customKeys"></div>
+        <br>
+    <input type="submit" value="Create Token" class="button">
     </form>
 </body>
-
-<!-- <script src="./footer.js"></script> -->
+<script>
+const checkIfCustom =() =>{
+    if(document.getElementById("type").value === "CUSTOM") {
+    document.getElementById("customKeys").innerHTML = '<br> <label for="api_key">API Key: </label> <input type="text" name="api_key" id="api_key"><br><br><label for="secret_key">Secret Key: </label> <input type="text" name="secret_key" id="secret_key">';
+    }
+}
+</script>
 </html>
