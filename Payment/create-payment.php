@@ -31,6 +31,12 @@
 echo $intent['element']['gpElement'];
 ?>
 </form>
+
+<form action="./process-card.php" method="post">
+<?php
+echo $intent['element']['apElement'];
+?>
+</form>
 <br> 
   
 <br>
