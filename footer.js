@@ -2,9 +2,9 @@
 var footer = document.createElement("footer");
 
 // Create anchor elements for each link and set their attributes
-var createTokenLink = createLink("../index.php", "Go Create Token");
-var createIntentLink = createLink("../Intent/create-intent.html", "Create Intent");
-var cardPaymentLink = createLink("../Payment/create-payment.php", "Card Payment");
+var createTokenLink = createLink("../index.php", "Tokens");
+var createIntentLink = createLink("../Intent/", "Create Intent");
+var cardPaymentLink = createLink("../Payment/creditcards", "Card Payment");
 
 
 // Append anchor elements to the footer

@@ -1,0 +1,12 @@
+.hostedfield {
+    font-family: "Cabin", sans-serif !important;
+    color: #333333;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.hostedfield::placeholder {
+    color: #999999;
+    opacity: 1;
+    font-family: "Cabin", sans-serif !important;
+}
