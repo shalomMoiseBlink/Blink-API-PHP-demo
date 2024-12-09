@@ -44,7 +44,7 @@
         <label for="return_url">Return URL</label>
         <input class="read-only-input" type="text" name="return_url" id="return_url" value="./redirect" readonly required>
         <label for="notification_url">Notification URL</label>
-        <input type="text" name="notification_url" id="notification_url" value="./notification" required>
+        <input type="text" name="notification_url" id="notification_url" value="https://webhook.site/c0400872-2694-4490-bf78-21965b9083ef" required>
         <label for="card_layout">Card layout</label>
         <select name="card_layout" id="card_layout" value="">
             <option value="basic">basic</option>

@@ -57,7 +57,7 @@
 
     ?>
 </body>
-<script src="../../footer.js"></script>
+
 
 
 </html>

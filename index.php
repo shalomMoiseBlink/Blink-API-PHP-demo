@@ -13,8 +13,10 @@
 </head>
 
 <body>
+    <div class="header">
     <h1>Blink API - Card Ecom Demo</h1>
-    <span>This is a basic demo of the blink API to make a card payment. <br> Please enter your keys below to get started.</span>
+    <span>This is a basic demo of the blink API to make a card payment. <br> Please enter your <a href="https://secure.blinkpayment.co.uk/admin/customer-centre/blink-pages" target="_blank" rel="noopener noreferrer">keys</a> below to get started. <br> <a target="blank" href="https://api-docs.blinkpayment.co.uk/">Full Doc Site</a></span>
+    </div>
     <br>
     <br>
     <form action="./Token/create-token.php" method="post" id="tokenForm">

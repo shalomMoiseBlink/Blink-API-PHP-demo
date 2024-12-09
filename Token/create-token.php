@@ -47,6 +47,7 @@
 
 
         session_start();
+        session_unset();
         $saveSession = json_decode($response, true);
         if ($httpcode === 201) {
             $_SESSION["access_token"] = $saveSession["access_token"];

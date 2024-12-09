@@ -11,14 +11,15 @@
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="https://gateway2.blinkpayment.co.uk/sdk/web/v1/js/hostedfields.min.js"></script>
     <script src="https://secure.blinkpayment.co.uk/assets/js/api/custom.js"></script>
-    <link rel="stylesheet" href="./hostedfield.css" class="hostedfield">
+    <link rel="stylesheet" href="./payments.css" class="hostedfield">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
 
-
+<div class="header">
 <h1>MOTO Single Payment</h1>
-
+</div>
 <?php 
     $url = "https://secure.blinkpayment.co.uk/api/pay/v1/intents";
 session_start();
@@ -47,14 +48,9 @@ session_start();
 
     ?>
 <form action="./create-Payment.php" method="post" id="mainform">
-
+<?php echo json_decode($response, true)["element"]["ccMotoElement"];?>
+<input type="submit" value=""> 
 </form>
-<script>
-     const intent = JSON.parse(<?php echo json_encode($response); ?>);
-    const form = document.getElementById("mainform");
-    if(intent.error)  form.innerHTML = intent.error;
-    else form.innerHTML = intent.element.ccMotoElement + "<input type='submit'>";
-</script>
 </body>
 
 </html>
